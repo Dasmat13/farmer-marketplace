@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Sprout, Menu, X, User, LogOut, Heart, ShoppingCart, ChefHat, Award, List, MessageCircle } from 'lucide-react';
+import { Sprout, Menu, X, User, LogOut, Heart, ShoppingCart, ChefHat, Award, List, MessageCircle, Truck } from 'lucide-react';
 import { useAuth } from '../../contexts/AuthContext';
 import { useCart } from '../../contexts/CartContext';
 
@@ -18,6 +18,7 @@ const Header: React.FC = () => {
     { name: 'Recipes', href: '/recipes', icon: ChefHat },
     { name: 'Compare', href: '/compare', icon: Award },
     { name: 'Lists', href: '/shopping-lists', icon: List },
+    { name: 'Orders', href: '/orders', icon: Truck },
     { name: 'Chat', href: '/chat', icon: MessageCircle },
     { name: 'About', href: '/about' }
   ];

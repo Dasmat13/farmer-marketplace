@@ -19,6 +19,7 @@ import Recipes from './pages/Recipes';
 import Compare from './pages/Compare';
 import ShoppingLists from './pages/ShoppingLists';
 import Chat from './pages/Chat';
+import OrderTracking from './pages/OrderTracking';
 import Cart from './pages/Cart';
 import NotFound from './pages/NotFound';
 import './App.css';
@@ -43,6 +44,8 @@ const AppContent: React.FC = () => {
               <Route path="/shopping-lists" element={<ShoppingLists />} />
               <Route path="/chat" element={<Chat />} />
               <Route path="/chat/:chatId" element={<Chat />} />
+              <Route path="/orders" element={<OrderTracking />} />
+              <Route path="/orders/:orderId" element={<OrderTracking />} />
           <Route 
             path="/farmer/dashboard" 
             element={

@@ -61,6 +61,7 @@ app.use('/api/crops', require('./routes/crops'));
 app.use('/api/orders', require('./routes/orders'));
 app.use('/api/predictions', require('./routes/predictions'));
 app.use('/api', require('./routes/chat'));
+app.use('/api', require('./routes/orderTracking'));
 
 // Health check
 app.get('/health', (req, res) => {
