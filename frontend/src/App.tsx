@@ -18,6 +18,7 @@ import Wishlist from './pages/Wishlist';
 import Recipes from './pages/Recipes';
 import Compare from './pages/Compare';
 import ShoppingLists from './pages/ShoppingLists';
+import Chat from './pages/Chat';
 import Cart from './pages/Cart';
 import NotFound from './pages/NotFound';
 import './App.css';
@@ -40,6 +41,8 @@ const AppContent: React.FC = () => {
               <Route path="/recipes" element={<Recipes />} />
               <Route path="/compare" element={<Compare />} />
               <Route path="/shopping-lists" element={<ShoppingLists />} />
+              <Route path="/chat" element={<Chat />} />
+              <Route path="/chat/:chatId" element={<Chat />} />
           <Route 
             path="/farmer/dashboard" 
             element={

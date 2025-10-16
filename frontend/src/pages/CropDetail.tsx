@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft, MapPin, Calendar, Package, Star, ShoppingCart, Check, Phone, Mail, Award } from 'lucide-react';
 import AIPrediction from '../components/AIPrediction';
 import ContactFarmer from '../components/ContactFarmer';
+import ContactFarmerChat from '../components/ContactFarmerChat';
 import CropRecommendations from '../components/CropRecommendations';
 import PricePrediction from '../components/PricePrediction';
 import WishlistButton from '../components/WishlistButton';
@@ -500,13 +501,19 @@ const CropDetail: React.FC = () => {
               </div>
             </div>
             <div className="mt-4 space-y-2">
+              <ContactFarmerChat
+                farmerId={crop.farmer.id}
+                farmerName={crop.farmer.name}
+                cropId={crop.id}
+                cropName={crop.name}
+              />
               <button 
                 onClick={() => setShowContactModal(true)}
-                className="w-full bg-farm-green-600 text-white py-2 px-4 rounded-md hover:bg-farm-green-700 transition-colors"
+                className="w-full border border-farm-green-600 text-farm-green-600 py-2 px-4 rounded-md hover:bg-farm-green-50 transition-colors"
               >
-                Contact Farmer
+                Contact via Email/Phone
               </button>
-              <Link to={`/farmers`} className="block w-full text-center border border-farm-green-600 text-farm-green-600 py-2 px-4 rounded-md hover:bg-farm-green-50 transition-colors">
+              <Link to={`/farmers`} className="block w-full text-center border border-gray-300 text-gray-600 py-2 px-4 rounded-md hover:bg-gray-50 transition-colors">
                 View All Farmer's Crops
               </Link>
             </div>
